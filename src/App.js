@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home-page';
-import Country from './Pages/Countries-page';
+import Country from './Pages/Country-page';
 import Error404 from './Pages/Error404-page';
 
 function App() {

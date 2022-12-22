@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './CountryCard.css';
 
 function CountryCard(props) {
     const { name,
@@ -11,14 +12,26 @@ function CountryCard(props) {
         map,
         population,
         continents,
-        flag,
-        startOfWeek } = props;
-    // console.log(flag);
+        flag } = props;
     return (
         <Link to={`/${name}`}>
             <div className='card'>
-                {/* <img src={flag.svg} alt={`${name} flag`} width="400" height="auto" border="1" /> */}
-                <h1>{name}</h1>
+                <div className="flag">
+                    <img src={flag} alt={`${name} flag`} />
+                </div>
+                <div className="country-name">
+                    <div className="col">
+                        <h1 className='common-name'>{name}</h1>
+                        <h2 className='official-name'>{fullName}</h2>
+                    </div>
+                    <div className="col">
+                        <h3 className="capital">{capital}</h3>
+                        {/* <h3>{Object.keys(currencyName)[0]}</h3> */}
+                    </div>
+                </div>
+                <div className="continent">
+                    <p>{continents}</p>
+                </div>
             </div>
         </Link>
     );
