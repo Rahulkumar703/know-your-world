@@ -24,23 +24,30 @@ function Country() {
     }, [countryName]);
 
 
-
     return (
         isLoading ? <Loader /> :
             <div className='country-page'>
-                <div className="col">
+                <div className="row">
                     <div className="flag">
                         {console.log(countryData)}
                         <img src={countryData.flags.svg} alt={`${countryData.flags.svg} flag`} />
                     </div>
                     <div className="basic-info">
                         <div className="name">
-                            <p><b>Common Name :</b> {countryData.name.common}</p>
-                            <p><b>Official Name :</b> {countryData.name.official}</p>
-                            <p><b>Capital :</b> {countryData.capital}</p>
+                            <p>Common Name : <b>{countryData.name.common}</b></p>
+                            <p>Official Name :<b> {countryData.name.official}</b></p>
+                            <p>Capital :<b> {countryData.capital}</b></p>
+                            <p>Currency :<b> {Object.values(countryData.currencies)[0].name} ({Object.values(countryData.currencies)[0].symbol})</b></p>
+                            <p>Population : <b>{(countryData.population) / 1000000} Million</b></p>
                         </div>
                     </div>
                 </div>
+                <div className="row-title">
+                    <p>More Informations</p>
+                </div>
+                {/* <div className="row">
+                    <p>More Informations</p>
+                </div> */}
             </div>
     );
 

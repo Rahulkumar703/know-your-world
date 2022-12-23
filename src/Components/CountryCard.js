@@ -5,12 +5,8 @@ import './CountryCard.css';
 function CountryCard(props) {
     const { name,
         fullName,
-        isIndependent,
         currencyName,
         capital,
-        area,
-        map,
-        population,
         continents,
         flag } = props;
     return (
@@ -26,7 +22,6 @@ function CountryCard(props) {
                     </div>
                     <div className="col">
                         <h3 className="capital">{capital}</h3>
-                        {/* <h3>{Object.keys(currencyName)[0]}</h3> */}
                     </div>
                 </div>
                 <div className="continent">

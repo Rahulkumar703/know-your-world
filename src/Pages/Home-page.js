@@ -27,15 +27,9 @@ function Home() {
                             key={index}
                             name={country.name.common}
                             fullName={country.name.official}
-                            isIndependent={country.independent}
-                            currencyName={country.currencies}
                             capital={country.capital}
-                            area={country.area}
-                            map={country.maps?.googleMaps}
-                            population={country.population}
                             continents={country.continents}
                             flag={country.flags.svg}
-                            startOfWeek={country.startOfWeek}
                         />
                     )
                 })}
